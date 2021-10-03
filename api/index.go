@@ -8,19 +8,14 @@ import (
 )
 
 func hello(c echo.Context) error {
-	return c.String(http.StatusOK, "Hello World")
-}
-
-func hello2(c echo.Context) error {
-	return c.String(http.StatusOK, "Hello World2")
+	return c.String(http.StatusOK, "Hello Go ECHO Vercel 🚀")
 }
 
 func Handler(w http.ResponseWriter, r *http.Request) {
 	e := echo.New()
 	e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
-	e.GET("/api/", hello)
-	e.GET("/api/2", hello2)
+	e.GET("/api/hello", hello)
 
 	e.ServeHTTP(w, r)
 }
