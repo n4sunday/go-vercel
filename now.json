@@ -1,5 +1,5 @@
 {
   "name": "go-vercel",
   "version": 2,
-  "routes": [{ "src": "/api/.*", "dest": "api/index.go" }]
+  "routes": [{ "src": "/api/.*", "dest": "api/main.go" }]
 }
